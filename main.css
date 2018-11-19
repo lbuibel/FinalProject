@@ -11,27 +11,32 @@ body {
 
 .intro {
   top: 0;
-  background: lightgray;
   min-height: 55vh;
-  padding-top: 45vh;
+  padding-top: 35vh;
+  background: no-repeat center/100% url('photo/timp.jpg');
 }
 
 .intro p {
-  color: green;
+  color: white;
+}
+.intro h1 {
+    color: white;
+    font-size: 50px;
 }
 
 nav ul {
   text-align: right;
   position: fixed;
   width: 100%;
-  background-color: darkgray;
+  background-color: rgb(57, 59, 62);
+  opacity: 80%;
 }
 
 nav ul li {
   display: inline-block;
   margin: 55px;
   margin-bottom: 15px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 nav ul li a {
@@ -40,5 +45,38 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: green;
+  color: skyblue;
+}
+
+/*------- button --------*/
+
+.buttonContainer {
+  border: solid red;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  margin: 10px;
+  font-size: 15px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+  background-color: rgb(57, 59, 62);
+}
+
+.button:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 8px 10px 12px;
 }
