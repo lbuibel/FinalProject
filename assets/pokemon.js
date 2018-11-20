@@ -93,8 +93,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u8349", 
-            "\u6bd2"
+            "grass", 
+            "poison"
         ]
     }, 
     {
@@ -196,8 +196,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u8349", 
-            "\u6bd2"
+            "grass", 
+            "poison"
         ]
     }, 
     {
@@ -311,8 +311,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u8349", 
-            "\u6bd2"
+            "grass", 
+            "poison"
         ]
     }, 
     {
@@ -414,7 +414,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u708e"
+            "fire"
         ]
     }, 
     {
@@ -517,7 +517,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u708e"
+            "fire"
         ]
     }, 
     {
@@ -644,8 +644,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u708e", 
-            "\u98de\u884c"
+            "fire", 
+            "flying"
         ]
     }, 
     {
@@ -747,7 +747,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u6c34"
+            "water"
         ]
     }, 
     {
@@ -851,7 +851,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u6c34"
+            "water"
         ]
     }, 
     {
@@ -973,7 +973,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u6c34"
+            "water"
         ]
     }, 
     {
@@ -1001,7 +1001,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u866b"
+            "bug"
         ]
     }, 
     {
@@ -1034,7 +1034,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u866b"
+            "bug"
         ]
     }, 
     {
@@ -1125,8 +1125,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u866b", 
-            "\u98de\u884c"
+            "bug", 
+            "flying"
         ]
     }, 
     {
@@ -1153,8 +1153,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u866b", 
-            "\u6bd2"
+            "bug", 
+            "poison"
         ]
     }, 
     {
@@ -1187,8 +1187,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u866b", 
-            "\u6bd2"
+            "bug", 
+            "poison"
         ]
     }, 
     {
@@ -1281,8 +1281,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u866b", 
-            "\u6bd2"
+            "bug", 
+            "poison"
         ]
     }, 
     {
@@ -1363,8 +1363,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u4e00\u822c", 
-            "\u98de\u884c"
+            "flying", 
+            "normal"
         ]
     }, 
     {
@@ -1447,8 +1447,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u4e00\u822c", 
-            "\u98de\u884c"
+            "flying", 
+            "normal"
         ]
     }, 
     {
@@ -1536,8 +1536,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u4e00\u822c", 
-            "\u98de\u884c"
+            "flying", 
+            "normal"
         ]
     }, 
     {
@@ -1555,7 +1555,7 @@ export const pokemon = [
         "jname": "\u30b3\u30e9\u30c3\u30bf", 
         "skills": {}, 
         "type": [
-            "\u4e00\u822c"
+            "normal"
         ]
     }, 
     {
@@ -1573,7 +1573,7 @@ export const pokemon = [
         "jname": "\u30e9\u30c3\u30bf", 
         "skills": {}, 
         "type": [
-            "\u4e00\u822c"
+            "normal"
         ]
     }, 
     {
@@ -1658,8 +1658,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u4e00\u822c", 
-            "\u98de\u884c"
+            "flying", 
+            "normal"
         ]
     }, 
     {
@@ -1748,8 +1748,8 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u4e00\u822c", 
-            "\u98de\u884c"
+            "flying", 
+            "normal"
         ]
     }, 
     {
@@ -1845,7 +1845,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u6bd2"
+            "poison"
         ]
     }, 
     {
@@ -1950,7 +1950,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u6bd2"
+            "poison"
         ]
     }, 
     {
@@ -2056,7 +2056,7 @@ export const pokemon = [
             ]
         }, 
         "type": [
-            "\u7535"
+            "electric"
         ]
     }
 ]
