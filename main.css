@@ -54,29 +54,167 @@ nav ul li a:hover {
   border: solid red;
   display: flex;
   justify-content: space-evenly;
+  height: 125px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .button {
-  margin: 10px;
-  font-size: 15px;
-  padding: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   cursor: pointer;
   display: inline-block;
-  border-radius: 25px;
-  background-color: rgb(57, 59, 62);
+  background: no-repeat center/100% url('photo/Pokeball.png');
+  border: none;
+  width: 125px;
+  height: 125px;
+  color: transparent;
 }
 
 .button:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  margin: 8px 10px 12px;
+  transform: scale(1.2);
 }
+
+/*-------------------------------------------*/
+.pokemonSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: solid blue;
+  padding-left: 20px;
+  width: 40%;
+}
+
+#pokemonInfo {
+  border: solid purple;
+  width: 60%;
+}
+
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card_face {
+  flex-flow: column;
+  backface-visibility: hidden;
+}
+
+.card_face_back {
+  height: 300px;
+  width: 300px;
+  background-image: url(photo/pokeLogo.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 5px;
+  transform: rotateY(180deg);
+  padding: 5;
+  margin: 10;
+  border: thick solid rgb(242,202,49);
+  box-shadow: 0 15px 6px -6px #777;
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  background-color: darkgray;
+  border-radius: 20px;
+}
+
+
+.card_face_back h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 75px;
+  padding-left: 20px;
+  display: flex;
+}
+
+.card_face_back p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: red;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, skyblue, darkblue);
+}
+
+.card_face_back p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, yellow,red);
+
+}
+.card_face_back p3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: purple;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, rgb(206,1,91),purple);
+
+}
+.card_face_back p4 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: green;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, rgb(61, 231, 70),darkgreen);
+
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  margin: 10;
+  padding: 5px;
+  box-shadow: 0 10px 6px -6px #777;
+  background-image: linear-gradient(180deg, lightblue, rgb(73,106,175));
+  border: thick solid rgb(242,202,49);
+  border-radius: 20px;
+}
+
+figure:hover{
+  box-shadow: 0 15px 6px -6px #777;
+  transform: rotateY(30deg);
+  transition: transform .75s;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+  border-radius: 20px;
+
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
