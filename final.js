@@ -1,6 +1,6 @@
 import { pokemon } from './assets/pokemon.js'
+import { legendary } from './assets/legendary.js'
 
-const pokeData = pokemon
 
 // Filters main pokemon file to make arrays of the start pokemon based on type
 const fireType = pokemon.filter(pokemon => pokemon.type[0] === "fire") 
@@ -12,12 +12,6 @@ console.log(pokemon)
 //-------------------------------------------
 
 const pokeContainer = document.querySelector('#container')
-
-let i = 0 // variable for selecting info from the array
-
-
-
-
 
 //------------ Main Pokemon Card/Button Functions -----------------
 
@@ -90,9 +84,12 @@ function typeButton (typeButton, arrayName, pokeType, section, cardType) {
         cardType.className = 'typeCard'
         section.appendChild(cardType)
         printPokemon(arrayName, cardType)
+        console.log(`The selected type of pokemon was ${pokeType}`)
     })
 }
 
+
+// constructor to create new pokeon - will be used to create rare pokemon array
 function Pokemon (ename, id, base, type) {
     this.ename = ename
     this.id = id
@@ -104,20 +101,18 @@ function Pokemon (ename, id, base, type) {
     this.type = type
 }
 
+
+//-------------- end of functions --------------------
+
+// addition of rare pokemon
 let dragonite = new Pokemon("Dragonite", 149, {"Attack": 134, "Defense": 95, "HP": 91}, "dragon")
 let mew = new Pokemon("Mew", 151, {"Attack": 100, "Defense": 100, "HP": 100}, "psychic")
 let mewTwo = new Pokemon("Mewtwo", 150, {"Attack": 110, "Defense": 110, "HP": 90}, "psychic")
 
-let rareType = [dragonite, mew, mewTwo]
-
-console.log(dragonite)
-console.log(mew)
-console.log(mewTwo)
-console.log(rareType)
+let rareType = [dragonite, mew, mewTwo] // new array with all the newly made rare pokemon
 
 
-//-------------- end of functions --------------------
-// sets up the card layout based on type to be used when specific button is pressed
+// sets up the card layout based on type when specific button is pressed
 let fireSection = document.querySelector('#fireContainer')
 let fireCard = document.querySelector('#fireCards')
 let fireButton = document.querySelector('#fireType')
@@ -141,88 +136,36 @@ typeButton (grassButton, grassType, "Grass-Type", grassSection, grassCard)
 typeButton (rareButton, rareType, "Rare-Type", rareSection, rareCard)
 
 
+// random legendary bird button
+let bird1 = legendary[0] // articuno
+let bird2 = legendary[1] // zapdos
+let bird3 = legendary[2] // moltres
 
+let button = document.querySelector('#newCard')
 
+var bird; // variable used when selecting random bird
 
+button.addEventListener('click', () => {
+    switch (Math.floor(Math.random() * Math.floor(4))){
+        // bird choice conditioned based on the random number that was generated
+        case 1:
+            bird = legendary[0];
+            break;
+        case 2:
+            bird = legendary[1];
+            break;
+        case 3:
+            bird = legendary[2];
+    }
 
-
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////
-/*
-
-let congrats = document.querySelector('#pokemonInfo')
-
-let fireButton = document.querySelector('#fireButton')
-let waterButton = document.querySelector('#waterButton')
-let grassButton = document.querySelector('#grassButton')
-
-
-fireButton.addEventListener('click', () => {
-    let message = document.createElement('h2')
-    message.textContent = "Congrats You selected Charmander!"
-    congrats.appendChild(message)
-
-    // adds buttons to the pokemon info section
-    let buttonDiv = document.createElement('div')
-    buttonDiv.className = "pokemonSection"
-    let evolutionButton = document.createElement('a')
-    let weaknessButton = document.createElement('a')
-    let strengthButton = document.createElement('a')
-    evolutionButton.className = 'button'
-    weaknessButton.className = 'button'
-    strengthButton.className = 'button'
-    evolutionButton.textContent = "Evolutions"
-    weaknessButton.textContent = "Weaknesses"
-    strengthButton.textContent = "Strengths"
-    buttonDiv.appendChild(evolutionButton)
-    buttonDiv.appendChild(weaknessButton)
-    buttonDiv.appendChild(strengthButton)
-    congrats.appendChild(buttonDiv)
+    console.log(`The randomly selected bird was ${bird.ename}`)
 
     let card = document.createElement('div')
     card.className = "card"
-    card.appendChild(cardFront(fireType))
-    card.appendChild(cardBack(fireType))
-    pokeContainer.appendChild(card)
-
+    card.appendChild(cardFront(bird))
+    card.appendChild(cardBack(bird))
+    legendaryContainer.appendChild(card)
     card.addEventListener('click', function() {
         card.classList.toggle('is-flipped');
     })
 })
-
-waterButton.addEventListener('click', () => {
-    let message = document.createElement('h2')
-    message.textContent = "Congrats You selected Squirtle!"
-    congrats.appendChild(message)
-    let card = document.createElement('div')
-    card.className = "card"
-    card.appendChild(cardFront(waterType))
-    card.appendChild(cardBack(waterType))
-    pokeContainer.appendChild(card)
-    card.addEventListener('click', function() {
-        card.classList.toggle('is-flipped');
-    })
-})
-
-grassButton.addEventListener('click', () => {
-    let message = document.createElement('h2')
-    message.textContent = "Congrats You selected Bulbasaur!"
-    congrats.appendChild(message)
-    let card = document.createElement('div')
-    card.className = "card"
-    card.appendChild(cardFront(grassType))
-    card.appendChild(cardBack(grassType))
-    pokeContainer.appendChild(card)
-    card.addEventListener('click', function() {
-        card.classList.toggle('is-flipped');
-    })
-})
-
-//---------------------------------------------
-*/

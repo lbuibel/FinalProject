@@ -83,28 +83,32 @@ nav ul li a:hover {
   align-items: center;
   padding-left: 20px;
 }
+#legendaryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
 
 .typeSection {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding-left: 20px;
+  text-align: center;
 }
 
 .typeCard {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 20px; 
-}
-
-.typeHeading {
-  text-align: center;
+  padding-bottom: 15px;
 }
 
 /*
-#pokemonInfo {
-  width: 60%;
+.typeHeading {
+  text-align: center;
 }
 */
 
