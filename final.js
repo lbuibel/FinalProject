@@ -7,9 +7,6 @@ const fireType = pokemon.filter(pokemon => pokemon.type[0] === "fire")
 const waterType = pokemon.filter(pokemon => pokemon.type[0] === "water")
 const grassType = pokemon.filter(pokemon => pokemon.type[0] === "grass")
 
-console.log(fireType)
-console.log(waterType)
-console.log(grassType)
 console.log(pokemon)
 
 //-------------------------------------------
@@ -17,6 +14,12 @@ console.log(pokemon)
 const pokeContainer = document.querySelector('#container')
 
 let i = 0 // variable for selecting info from the array
+
+
+
+
+
+//------------ Main Pokemon Card/Button Functions -----------------
 
 // Function to set up the front side of the pokemon card
 const cardFront = (element) => {
@@ -70,7 +73,7 @@ function printPokemon(array, pokeSection) {
     }) 
 }
 
-// prints all the pokemon to the page
+// uses above function prints all the pokemon to the page
 printPokemon(pokemon, pokeContainer) 
 
 
@@ -79,7 +82,7 @@ function typeButton (typeButton, arrayName, pokeType, section, cardType) {
     typeButton.addEventListener('click', () => {
         let messageDiv = document.createElement('div')
         let message = document.createElement('h2')
-        message.textContent = `You've selected ${pokeType} Pokemon!`
+        message.textContent = `You've selected ${pokeType} Pokemon!`// 
         messageDiv.appendChild(message)
         messageDiv.className= 'typeHeading'
         section.appendChild(messageDiv)
@@ -90,7 +93,31 @@ function typeButton (typeButton, arrayName, pokeType, section, cardType) {
     })
 }
 
+function Pokemon (ename, id, base, type) {
+    this.ename = ename
+    this.id = id
+    this.base = {
+        Attack: base.Attack,
+        Defense: base.Defense,
+        HP: base.HP
+    }
+    this.type = type
+}
 
+let dragonite = new Pokemon("Dragonite", 149, {"Attack": 134, "Defense": 95, "HP": 91}, "dragon")
+let mew = new Pokemon("Mew", 151, {"Attack": 100, "Defense": 100, "HP": 100}, "psychic")
+let mewTwo = new Pokemon("Mewtwo", 150, {"Attack": 110, "Defense": 110, "HP": 90}, "psychic")
+
+let rareType = [dragonite, mew, mewTwo]
+
+console.log(dragonite)
+console.log(mew)
+console.log(mewTwo)
+console.log(rareType)
+
+
+//-------------- end of functions --------------------
+// sets up the card layout based on type to be used when specific button is pressed
 let fireSection = document.querySelector('#fireContainer')
 let fireCard = document.querySelector('#fireCards')
 let fireButton = document.querySelector('#fireType')
@@ -103,29 +130,26 @@ let grassSection = document.querySelector('#grassContainer')
 let grassCard = document.querySelector('#grassCards')
 let grassButton = document.querySelector('#grassType')
 
+let rareSection = document.querySelector('#rareContainer')
+let rareCard = document.querySelector('#rareCards')
+let rareButton = document.querySelector('#raretype')
+
+// Print main poke-types after type-button has been pushed
 typeButton (fireButton, fireType, "Fire-Type", fireSection, fireCard)
 typeButton (waterButton, waterType, "Water-Type", waterSection, waterCard)
 typeButton (grassButton, grassType, "Grass-Type", grassSection, grassCard)
+typeButton (rareButton, rareType, "Rare-Type", rareSection, rareCard)
 
-/*
-fireButton.addEventListener('click', () => {
-    let messageDiv = document.createElement('div')
-    let message = document.createElement('h2')
-    message.textContent = "You've selected Fire-Type Pokemon!"
-    messageDiv.appendChild(message)
-    messageDiv.className= 'typeHeading'
-    fireSection.appendChild(messageDiv)
-    let fireCards = document.createElement('div')
-    fireCards.className = "typeCard"
-    fireSection.appendChild(fireCards)
-    printPokemon(fireType, fireCards)
-})
-*/
 
-//fireButton = the button that was pressed
-// Fire-Type = which type of pokemon
-// fire-section shoudl be fireContainer - refrences html element
-// fireCards - element created within function - is child of fireSection
+
+
+
+
+
+
+
+
+
 
 
 
