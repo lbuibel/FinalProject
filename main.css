@@ -51,15 +51,13 @@ nav ul li a:hover {
 /*------- button --------*/
 
 .buttonContainer {
-  border: solid red;
   display: flex;
   justify-content: space-evenly;
   height: 125px;
   padding-top: 20px;
-  padding-bottom: 10px;
 }
 
-.button {
+.pokeButton {
   cursor: pointer;
   display: inline-block;
   background: no-repeat center/100% url('photo/Pokeball.png');
@@ -69,7 +67,7 @@ nav ul li a:hover {
   color: transparent;
 }
 
-.button:hover{
+.pokeButton:hover{
   transform: scale(1.2);
 }
 
@@ -83,16 +81,32 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border: solid blue;
   padding-left: 20px;
-  width: 40%;
 }
 
+.typeSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.typeCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px; 
+}
+
+.typeHeading {
+  text-align: center;
+}
+
+/*
 #pokemonInfo {
-  border: solid purple;
   width: 60%;
 }
-
+*/
 
 .card.is-flipped {
   transform: rotateY(180deg);
@@ -218,3 +232,26 @@ img {
   height: 300px;
 }
 
+/*---------------*/
+
+.button {
+  font-size: 15px;
+  width: 175px;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  border: 2px solid #3c73ff;
+  background-color: #3c73ff;
+  border-radius: 20px;
+  color: #fff;
+  transition: .3s;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.button:hover {
+  box-shadow: 5px 5px #99bdff;
+  transition: .3s;
+}
