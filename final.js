@@ -73,7 +73,7 @@ printPokemon(pokemon, pokeContainer)
 
 // function to resond to button press based on desired poke-type
 function typeButton (typeButton, arrayName, pokeType, section, cardType) {
-    let counter = 0;
+    let counter = 0; // counter for number of button presses (will limit button to one push)
     typeButton.addEventListener('click', () => {
         if (counter < 1){
             let messageDiv = document.createElement('div')
@@ -115,6 +115,7 @@ let dragonite = new Pokemon("Dragonite", 149, {"Attack": 134, "Defense": 95, "HP
 let mew = new Pokemon("Mew", 151, {"Attack": 100, "Defense": 100, "HP": 100}, "psychic")
 let mewTwo = new Pokemon("Mewtwo", 150, {"Attack": 110, "Defense": 110, "HP": 90}, "psychic")
 
+// creation of new array contianing rare pokemon
 let rareType = [dragonite, mew, mewTwo] // new array with all the newly made rare pokemon
 
 
@@ -151,6 +152,8 @@ let button = document.querySelector('#newCard')
 
 var bird; // variable used when selecting random bird
 
+
+// Setup for legendary bird button (unlike other buttons - has unlimited amount of clicks)
 button.addEventListener('click', () => {
     switch (Math.floor(Math.random() * Math.floor(4))){
         // bird choice conditioned based on the random number that was generated

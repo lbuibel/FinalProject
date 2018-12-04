@@ -75,7 +75,6 @@ nav ul li a:hover {
 .pokemonSection {
   display: flex;
   justify-content: space-evenly;
-  background-color: lightgray;
 }
 
 #container {
@@ -272,4 +271,7 @@ img {
 }
 #rareContainer {
   background-image: linear-gradient(pink,purple)
+}
+#newCard {
+  width: 125px;
 }
