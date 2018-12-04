@@ -54,6 +54,7 @@ const cardBack = (element) => {
 }
 
 // function to create pokemon cards based on a certain array, and places them in specified div
+// will be used to print the different pokemon types with the typeButton function
 function printPokemon(array, pokeSection) {
     array.forEach(pokemon => {
         let pokemonCard = document.createElement('div')
@@ -71,11 +72,11 @@ function printPokemon(array, pokeSection) {
 printPokemon(pokemon, pokeContainer) 
 
 
-// function to resond to button press based on desired poke-type
+// function to respond to button press based on desired poke-type on top of page
 function typeButton (typeButton, arrayName, pokeType, section, cardType) {
     let counter = 0; // counter for number of button presses (will limit button to one push)
     typeButton.addEventListener('click', () => {
-        if (counter < 1){
+        if (counter < 1){ // condition of whether of not button has already been pressed
             let messageDiv = document.createElement('div')
             let message = document.createElement('h2')
             message.textContent = `You've selected ${pokeType} Pokemon!`// 
@@ -141,6 +142,10 @@ typeButton (fireButton, fireType, "Fire-Type", fireSection, fireCard)
 typeButton (waterButton, waterType, "Water-Type", waterSection, waterCard)
 typeButton (grassButton, grassType, "Grass-Type", grassSection, grassCard)
 typeButton (rareButton, rareType, "Rare-Type", rareSection, rareCard)
+
+
+
+//------------------- New Section - Legendary Birds --------------------
 
 
 // random legendary bird button
