@@ -75,6 +75,7 @@ nav ul li a:hover {
 .pokemonSection {
   display: flex;
   justify-content: space-evenly;
+  background-color: lightgray;
 }
 
 #container {
@@ -258,4 +259,17 @@ img {
 .button:hover {
   box-shadow: 5px 5px #99bdff;
   transition: .3s;
+}
+
+#fireContainer {
+  background-image: linear-gradient(yellow, red);
+}
+#waterContainer {
+  background-image: linear-gradient(lightblue, darkblue)
+}
+#grassContainer {
+  background-image: linear-gradient(lightgreen, darkgreen)
+}
+#rareContainer {
+  background-image: linear-gradient(pink,purple)
 }

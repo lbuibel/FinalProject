@@ -73,18 +73,24 @@ printPokemon(pokemon, pokeContainer)
 
 // function to resond to button press based on desired poke-type
 function typeButton (typeButton, arrayName, pokeType, section, cardType) {
+    let counter = 0;
     typeButton.addEventListener('click', () => {
-        let messageDiv = document.createElement('div')
-        let message = document.createElement('h2')
-        message.textContent = `You've selected ${pokeType} Pokemon!`// 
-        messageDiv.appendChild(message)
-        messageDiv.className= 'typeHeading'
-        section.appendChild(messageDiv)
-        let cardType = document.createElement('div')
-        cardType.className = 'typeCard'
-        section.appendChild(cardType)
-        printPokemon(arrayName, cardType)
-        console.log(`The selected type of pokemon was ${pokeType}`)
+        if (counter < 1){
+            let messageDiv = document.createElement('div')
+            let message = document.createElement('h2')
+            message.textContent = `You've selected ${pokeType} Pokemon!`// 
+            messageDiv.appendChild(message)
+            messageDiv.className= 'typeHeading'
+            section.appendChild(messageDiv)
+            let cardType = document.createElement('div')
+            cardType.className = 'typeCard'
+            section.appendChild(cardType)
+            printPokemon(arrayName, cardType)
+            console.log(`The selected type of pokemon was ${pokeType}`)
+            counter++
+        } else{
+            console.log(`${pokeType} button is already selected`)
+        }
     })
 }
 
