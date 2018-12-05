@@ -221,6 +221,7 @@ figure:hover{
   box-shadow: 0 15px 6px -6px #777;
   transform: rotateY(30deg);
   transition: transform .75s;
+  cursor: pointer;
 }
 
 figcaption {
@@ -261,6 +262,7 @@ img {
 .button:hover {
   box-shadow: 5px 5px #99bdff;
   transition: .3s;
+  cursor: pointer;
 }
 
 /*-----------------------Pokemon Type Sections-----------------------------------------*/

@@ -121,6 +121,7 @@ let rareType = [dragonite, mew, mewTwo] // new array with all the newly made rar
 
 
 // sets up the card layout based on type when specific button is pressed
+// containers are setup in the html file
 let fireSection = document.querySelector('#fireContainer')
 let fireCard = document.querySelector('#fireCards')
 let fireButton = document.querySelector('#fireType')
