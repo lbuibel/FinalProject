@@ -97,7 +97,7 @@ function typeButton (typeButton, arrayName, pokeType, section, cardType) {
 
 
 // constructor to create new pokeon - will be used to create rare pokemon array
-function Pokemon (ename, id, base, type) {
+function rarePokemon (ename, id, base, type) {
     this.ename = ename
     this.id = id
     this.base = {
@@ -105,16 +105,16 @@ function Pokemon (ename, id, base, type) {
         Defense: base.Defense,
         HP: base.HP
     }
-    this.type = type
+    this.type = "rare"
 }
 
 
 //-------------- end of functions --------------------
 
 // addition of rare pokemon
-let dragonite = new Pokemon("Dragonite", 149, {"Attack": 134, "Defense": 95, "HP": 91}, "dragon")
-let mew = new Pokemon("Mew", 151, {"Attack": 100, "Defense": 100, "HP": 100}, "psychic")
-let mewTwo = new Pokemon("Mewtwo", 150, {"Attack": 110, "Defense": 110, "HP": 90}, "psychic")
+let dragonite = new rarePokemon("Dragonite", 149, {"Attack": 134, "Defense": 95, "HP": 91})
+let mew = new rarePokemon("Mew", 151, {"Attack": 100, "Defense": 100, "HP": 100})
+let mewTwo = new rarePokemon("Mewtwo", 150, {"Attack": 110, "Defense": 110, "HP": 90})
 
 // creation of new array contianing rare pokemon
 let rareType = [dragonite, mew, mewTwo] // new array with all the newly made rare pokemon
@@ -150,10 +150,6 @@ typeButton (rareButton, rareType, "Rare-Type", rareSection, rareCard)
 
 
 // random legendary bird button
-let bird1 = legendary[0] // articuno
-let bird2 = legendary[1] // zapdos
-let bird3 = legendary[2] // moltres
-
 let button = document.querySelector('#newCard')
 
 var bird; // variable used when selecting random bird

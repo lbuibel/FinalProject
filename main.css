@@ -2,6 +2,7 @@ html,
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  background-color: lightgray;
 }
 
 * {
@@ -10,9 +11,9 @@ body {
 }
 
 .intro {
-  top: 0;
-  min-height: 55vh;
+  min-height: 40vh;
   padding-top: 35vh;
+  margin-bottom: 10px;
   background: no-repeat center/100% url('photo/timp.jpg');
 }
 
@@ -53,8 +54,8 @@ nav ul li a:hover {
 .buttonContainer {
   display: flex;
   justify-content: space-evenly;
-  height: 125px;
-  padding-top: 20px;
+  height: 50px;
+  margin-bottom: 20px;
 }
 
 .pokeButton {
@@ -92,6 +93,7 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+/*
 .typeSection {
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +101,7 @@ nav ul li a:hover {
   padding-left: 20px;
   text-align: center;
 }
+*/
 
 /* ------------------ Card front/back setup ------------------- */
 
@@ -109,6 +112,25 @@ nav ul li a:hover {
   flex-wrap: wrap;
   align-items: center;
   padding-bottom: 15px;
+  margin-bottom: 0px;
+}
+
+.sectionHeading {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  background-image: linear-gradient(gray,darkgray)
+
+}
+
+.typeHeading {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.typeHeading h2 {
+  color: white;
+  font-size: 35px;
 }
 /* card setup for when the card has been clicked/flipped */
 .card.is-flipped {
@@ -146,7 +168,7 @@ nav ul li a:hover {
 /* h3 - p4 styles the information on the backside of the card (attack, hp etc) */
 .card_face_back h3 {
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 75px;
+  padding-top: 95px;
   padding-left: 20px;
   display: flex;
 }
@@ -280,4 +302,12 @@ img {
 }
 #rareContainer {
   background-image: linear-gradient(pink,purple)
+}
+
+#newCard {
+  margin-bottom: 20px;
+}
+
+#original25 {
+  margin-top: 50px;
 }
