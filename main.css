@@ -2,7 +2,7 @@ html,
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  background-color: lightgray;
+  background-color: black;
 }
 
 * {
@@ -11,10 +11,11 @@ body {
 }
 
 .intro {
+  top: 0;
   min-height: 40vh;
   padding-top: 35vh;
   margin-bottom: 10px;
-  background: no-repeat center/100% url('photo/timp.jpg');
+  background: no-repeat center/100% url('photo/Gen_I_Pokedex.png');
 }
 
 .intro p {
@@ -91,6 +92,7 @@ nav ul li a:hover {
   align-items: center;
   padding-left: 20px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 /*
@@ -120,7 +122,7 @@ nav ul li a:hover {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 15px;
-  background-image: linear-gradient(gray,darkgray)
+  background-color: rgb(189,13,48)
 
 }
 

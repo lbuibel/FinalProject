@@ -160,13 +160,19 @@ button.addEventListener('click', () => {
     switch (Math.floor(Math.random() * Math.floor(4))){
         // bird choice conditioned based on the random number that was generated
         case 1:
+            //articuno
             bird = legendary[0];
+            document.getElementById("legendaryContainer").style.backgroundImage = "url('photo/articuno.jpg')";
             break;
         case 2:
+            //zapdos
             bird = legendary[1];
+            document.getElementById("legendaryContainer").style.backgroundImage = "url('photo/zapdos.png')";
             break;
         case 3:
+            //moltres
             bird = legendary[2];
+            document.getElementById("legendaryContainer").style.backgroundImage = "url('photo/moltres.jpg')";
     }
 
     console.log(`The randomly selected bird was ${bird.ename}`)
