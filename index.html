@@ -8,45 +8,27 @@
 </head>
 <body>
 
+    <nav>
+        <ul id='navbar'>
+          <li><a href="#aboutMe">About</a></li>
+          <li><a href="pokemon.html">Card Project</a></li>
+        </ul>
+      </nav>
+
     <!--Contains picture and Name etc-->
     <div id="landingSection" class="intro">
-        <h1>Final Project</h1>
-        <p> by Logan Uibel</p>
+        <h1>Portfolio</h1>
+        <p> Logan Uibel - Web Developer</p>
     </div>
 
-    <!--Heading above the buttons based on pokemon type-->
-    <div class = typeHeading>
-            <h2> Sort pokemon by type</h2>
-    </div>
-    <!--Container for section of buttons-->
-    <div id='typeButton' class='buttonContainer'>
-        <a class = "button" id = 'fireType'>Fire Type</a>
-        <a class = "button" id = 'waterType'> Water Type</a>
-        <a class = "button" id = 'grassType'> Grass Type</a>
-        <a class = "button" id = 'rareType'> Rare Pokemon</a>
+    <div id="aboutMe">
+        <h2>About Me...</h2>
+        <p>I'm a newly declared web developer major, and this is my first big project using Javascript.</p>
+        <p>Here are some other programming languages I've learned..</p>
     </div>
 
-    <!--The sections are referenced in the final.js page - will hold pokemon cards based on type-->
-    <div id ='fireContainer' class = "typeSection"></div>
-    <div id = 'waterContainer' class = "typeSection"></div>
-    <div id = 'grassContainer' class = "typeSection"></div>
-    <div id = 'rareContainer' class = "typeSection"></div>
-     
-    <!--Will automatically display the cards for the original 25 pokemon-->
-    <h2 class = "sectionHeading" id = "original25">Original 25 pokemon</h2>
-    <div class = "pokemonSection">
-        <div id = "container"></div>
+    <div id="logoSection">
+        <img class="img" src= "photo/pythong.png">
+        <img class="img" src="photo/c++.png">
+        <img class="img" src="photo/javalogo.png">
     </div>
-
-    <!--New section - random button for legendary birds-->
-    <h2 class = "sectionHeading">Legendary Birds</h2>
-    <div class = "pokemonSection">
-        <div id = "legendaryContainer"></div>
-    </div>
-    <a class = "button" id = "newCard"> Random Legendary Bird</button>
-
-    <!--Referencing the main javascript page-->
-    <script type="module" src="final.js"></script>
-
-</body>
-</html>

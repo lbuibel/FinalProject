@@ -1,0 +1,314 @@
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  top: 0;
+  min-height: 40vh;
+  padding-top: 35vh;
+  margin-bottom: 10px;
+  background: no-repeat center/100% url('photo/Gen_I_Pokedex.png');
+}
+
+.intro p {
+  color: white;
+}
+.intro h1 {
+    color: white;
+    font-size: 50px;
+}
+
+nav ul {
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 55px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #3c73ff;
+}
+
+/*------- button --------*/
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.pokeButton {
+  cursor: pointer;
+  display: inline-block;
+  background: no-repeat center/100% url('photo/Pokeball.png');
+  border: none;
+  width: 125px;
+  height: 125px;
+  color: transparent;
+}
+
+.pokeButton:hover{
+  transform: scale(1.2);
+}
+
+/*----------------Card container Setup---------------------------*/
+/* pokemonSection/container aligns all of the cards within the page */
+.pokemonSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+}
+#legendaryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/*
+.typeSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+  text-align: center;
+}
+*/
+
+/* ------------------ Card front/back setup ------------------- */
+
+/* typeCard is created within final.js - assigns card to the type of pokemon
+   similar setup to main pokeSection etc */
+.typeCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 0px;
+}
+
+.sectionHeading {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  background-color: rgb(189,13,48)
+
+}
+
+.typeHeading {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.typeHeading h2 {
+  color: white;
+  font-size: 35px;
+}
+/* card setup for when the card has been clicked/flipped */
+.card.is-flipped {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card_face {
+  flex-flow: column;
+  backface-visibility: hidden;
+}
+
+/* styling for backside of pokemon card - background image is the Pokemon lettering/logo */
+.card_face_back {
+  height: 300px;
+  width: 300px;
+  background-image: url(photo/pokeLogo.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 5px;
+  transform: rotateY(180deg);
+  padding: 5;
+  margin: 10;
+  border: thick solid rgb(242,202,49);
+  box-shadow: 0 15px 6px -6px #777;
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  background-color: darkgray;
+  border-radius: 20px;
+}
+
+/* h3 - p4 styles the information on the backside of the card (attack, hp etc) */
+.card_face_back h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 95px;
+  padding-left: 20px;
+  display: flex;
+}
+
+.card_face_back p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: red;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, skyblue, darkblue);
+}
+
+.card_face_back p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, yellow,red);
+
+}
+.card_face_back p3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: purple;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, rgb(206,1,91),purple);
+
+}
+.card_face_back p4 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: green;
+  color: white;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(-90deg, rgb(61, 231, 70),darkgreen);
+
+}
+
+/* main container for the pokemon card - contains pokemon picture, caption, card face front */
+figure {
+  display: flex;
+  flex-flow: column;
+  margin: 10;
+  padding: 5px;
+  box-shadow: 0 10px 6px -6px #777;
+  background-image: linear-gradient(180deg, lightblue, rgb(73,106,175));
+  border: thick solid rgb(242,202,49);
+  border-radius: 20px;
+}
+
+/* card hover hints that the card can be rotated and flipped over */
+figure:hover{
+  box-shadow: 0 15px 6px -6px #777;
+  transform: rotateY(30deg);
+  transition: transform .75s;
+  cursor: pointer;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+  border-radius: 20px;
+
+}
+
+/* sets the size of the pokemon image on the front side of the card*/
+img {
+  width: 300px;
+  height: 300px;
+}
+
+/*------Button Setup for both the type buttons and legendary bird button ---------*/
+
+.button {
+  font-size: 15px;
+  width: 175px;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  border: 2px solid #3c73ff;
+  background-color: #3c73ff;
+  border-radius: 20px;
+  color: #fff;
+  transition: .3s;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.button:hover {
+  box-shadow: 5px 5px #99bdff;
+  transition: .3s;
+  cursor: pointer;
+}
+
+/*-----------------------Pokemon Type Sections-----------------------------------------*/
+
+/* Styling/color for containers based on type - only visible after click */
+
+#fireContainer {
+  background-image: linear-gradient(yellow, red);
+}
+#waterContainer {
+  background-image: linear-gradient(lightblue, darkblue)
+}
+#grassContainer {
+  background-image: linear-gradient(lightgreen, darkgreen)
+}
+#rareContainer {
+  background-image: linear-gradient(pink,purple)
+}
+
+#newCard {
+  margin-bottom: 20px;
+}
+
+#original25 {
+  margin-top: 50px;
+}
